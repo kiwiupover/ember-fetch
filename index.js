@@ -130,7 +130,7 @@ module.exports = {
 
   // Only include public/fetch-fastboot.js if top level addon
   treeForPublic() {
-    return !this.parent.parent ? this._super.treeForPublic.apply(this, arguments) : null;
+    return this._super.treeForPublic.apply(this, arguments);
   },
 
   cacheKeyForTree(treeType) {
